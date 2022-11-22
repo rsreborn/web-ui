@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'runescape' as rs;
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rs.$background;
+    font-size: rs.$font-size;
+    font-family: rs.$font-family;
+    color: rs.$white;
+}
+
+a {
+    color: rs.$link-green;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+footer {
+    clear: both;
+    font-size: 11px;
+    text-align: center;
+}

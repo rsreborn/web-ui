@@ -1,4 +1,4 @@
-# RsRebornUi
+# RS-Reborn Web UI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
 

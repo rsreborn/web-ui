@@ -1,0 +1,49 @@
+@use '../../../runescape' as rs;
+
+.rsr-title {
+    header.rsr-title-header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    main.rsr-title-body {
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        aside.rsr-title-nav {
+            fieldset {
+                background-color: rs.$black;
+                border: 2px solid rs.$brown;
+                width: 260px;
+                margin: 0 0 10px 0;
+                display: block;
+                padding: 0 5px 5px 5px;
+                background-position: bottom right;
+                background-repeat: no-repeat;
+
+                legend {
+                    color: rs.$white;
+                    font-weight: 700;
+                }
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        list-style: square inside;
+                        width: 220px;
+                    }
+                }
+
+                &.rs {
+                    background-image: url('/assets/title/nav/rsicon.gif');
+                }
+            }
+        }
+
+        aside.rsr-title-content {
+
+        }
+    }
+}
