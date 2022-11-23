@@ -1,0 +1,15 @@
+<ng-container *ngIf="link; else hrefLink">
+    <a [routerLink]="link">
+        <ng-container *ngTemplateOutlet="linkText"></ng-container>
+    </a>
+</ng-container>
+
+<ng-template #hrefLink>
+    <a [href]="href" target="_blank">
+        <ng-container *ngTemplateOutlet="linkText"></ng-container>
+    </a>
+</ng-template>
+
+<ng-template #linkText>
+    <ng-content></ng-content>
+</ng-template>

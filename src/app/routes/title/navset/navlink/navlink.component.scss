@@ -1,0 +1,8 @@
+li.rsr-navlink {
+    list-style: square inside;
+    width: 220px;
+
+    a {
+        display: inline-block; // trims opening/trailing whitespace
+    }
+}

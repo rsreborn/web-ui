@@ -1,0 +1,21 @@
+@use '../../../../runescape' as rs;
+
+fieldset.rsr-navset {
+    background-color: rs.$black;
+    border: 2px solid rs.$brown;
+    width: 260px;
+    margin: 0 0 10px 0;
+    display: block;
+    padding: 0 5px 5px 5px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    &.rsr-expand {
+        min-height: 66px;
+    }
+}

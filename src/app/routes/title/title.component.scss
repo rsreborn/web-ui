@@ -11,39 +11,49 @@
         grid-template-columns: auto 1fr;
 
         aside.rsr-title-nav {
-            fieldset {
-                background-color: rs.$black;
-                border: 2px solid rs.$brown;
-                width: 260px;
-                margin: 0 0 10px 0;
-                display: block;
-                padding: 0 5px 5px 5px;
-                background-position: bottom right;
-                background-repeat: no-repeat;
-
-                legend {
-                    color: rs.$white;
-                    font-weight: 700;
-                }
-
-                ul {
-                    padding: 0;
-                    margin: 0;
-
-                    li {
-                        list-style: square inside;
-                        width: 220px;
-                    }
-                }
-
-                &.rs {
-                    background-image: url('/assets/title/nav/rsicon.gif');
-                }
+            legend {
+                color: rs.$white;
+                font-weight: bold;
             }
         }
 
         aside.rsr-title-content {
+            margin-bottom: 110px;
+            padding-left: 16px;
 
+            .rsr-buttons {
+                width: 457px;
+                height: 110px;
+                position: relative;
+                margin: 0;
+
+                a {
+                    display: block;
+                    position: absolute;
+                    width: 200px;
+                    height: 100px;
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    font-weight: bold;
+                    color: white;
+                    text-align: center;
+                    top: 0;
+
+                    &:hover {
+                        background-position: bottom;
+                    }
+
+                    &.rsr-left {
+                        left: 15px;
+                        background-image: url('/assets/title/doublebutton_create.gif');
+                    }
+
+                    &.rsr-right {
+                        right: 15px;
+                        background-image: url('/assets/title/doublebutton_play.gif');
+                    }
+                }
+            }
         }
     }
 }

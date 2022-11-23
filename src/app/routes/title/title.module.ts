@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TitleRoutingModule } from './title-routing.module';
 import { TitleComponent } from './title.component';
+import { NavsetModule } from './navset/navset.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { TitleComponent } from './title.component';
     ],
     imports: [
         CommonModule,
-        TitleRoutingModule
+        TitleRoutingModule,
+        NavsetModule
     ]
 })
 export class TitleModule {

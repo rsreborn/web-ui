@@ -1,0 +1,9 @@
+<fieldset class="rsr-navset" [ngStyle]="styles" [class.rsr-expand]="minHeight">
+    <ng-content select="legend"></ng-content>
+
+    <ng-content select="span"></ng-content>
+
+    <ul>
+        <ng-content select="li"></ng-content>
+    </ul>
+</fieldset>
