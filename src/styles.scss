@@ -21,7 +21,16 @@ a {
     }
 }
 
-footer {
+.rsr-scroll {
+    color: rs.$black;
+
+    a {
+        color: rs.$link-brown;
+        font-weight: bold;
+    }
+}
+
+footer.rsr-site-footer {
     clear: both;
     font-size: 11px;
     text-align: center;

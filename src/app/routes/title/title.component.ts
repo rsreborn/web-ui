@@ -55,15 +55,12 @@ export class TitleComponent implements OnInit {
         `'Oh no, there's a bear in my bed!' 'Nope, Chuck Testa!'`
     ];
 
+    readonly randomMessage: string = this.headerMessages[Math.floor(Math.random() * this.headerMessages.length)];
+
     constructor() {
     }
 
     ngOnInit(): void {
-    }
-
-    get randomMessage(): string {
-        const rand = Math.floor(Math.random() * this.headerMessages.length);
-        return this.headerMessages[rand];
     }
 
 }
