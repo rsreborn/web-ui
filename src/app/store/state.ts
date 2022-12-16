@@ -11,12 +11,34 @@ export class State<T> {
     constructor(
         name: string,
         initialValue: T = null,
-        save: boolean,
+        save: boolean = true,
+        autoLoadSaveData: boolean = true,
     ) {
         this.name = name;
         this.subject = new BehaviorSubject<T>(initialValue);
         this.value$ = this.subject.asObservable();
         this.save = save;
+
+        if (save && autoLoadSaveData) {
+            this.loadSavedState();
+        }
+    }
+
+    loadSavedState(
+        validationFunction?: (value: T, ...args: unknown[]) => boolean,
+        ...validationArgs: unknown[]
+    ): T {
+        if (!validationArgs?.length) {
+            validationArgs = undefined;
+        }
+
+        const savedData = JSON.parse(localStorage.getItem(this.name) || null) as T || null;
+
+        if (savedData && (!validationFunction || validationFunction(savedData, validationArgs))) {
+            this.value = savedData;
+        }
+
+        return this.value;
     }
 
     subscribe(callback: (value: T) => void): Subscription {

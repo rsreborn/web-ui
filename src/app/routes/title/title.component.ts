@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Theme, ThemeStore } from '../../store/theme-store';
 
 @Component({
     selector: 'rsr-title',
@@ -57,7 +58,14 @@ export class TitleComponent implements OnInit {
 
     readonly randomMessage: string = this.headerMessages[Math.floor(Math.random() * this.headerMessages.length)];
 
-    constructor() {
+    readonly theme$ = this.themeStore.theme.value$;
+
+    readonly THEME_RSC = Theme.RSC;
+    readonly THEME_RS2_BETA = Theme.RS2_BETA;
+    readonly THEME_RS_LATE_03 = Theme.RS_LATE_03;
+    readonly THEME_RS_LATE_04 = Theme.RS_LATE_04;
+
+    constructor(private themeStore: ThemeStore) {
     }
 
     ngOnInit(): void {

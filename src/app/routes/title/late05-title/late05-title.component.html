@@ -1,0 +1,223 @@
+<header class="rsr-title-header">
+    <img *ngIf="isLate05Theme; else logo06"
+         src="assets/title/rsrlogo.png" alt="RS-Reborn" />
+
+    <ng-template #logo06>
+        <img src="assets/title/rsrlogo1.png" alt="RS-Reborn" />
+    </ng-template>
+
+    <div>{{ headerMessage }}</div>
+</header>
+
+<main class="rsr-title-body">
+    <aside class="rsr-title-nav">
+        <rsr-navset icon="rsicon">
+            <legend>RS-Reborn</legend>
+            <li rsr-navlink link="/create" icon="create">
+                Create a free account (New user)
+            </li>
+            <li rsr-navlink link="/detail" icon="play">
+                Play RS-Reborn (Existing user)
+            </li>
+            <li rsr-navlink link="/screenshots" icon="screenshots">
+                View in-game screenshots
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="kbase">
+            <legend>Information and Advice</legend>
+            <li rsr-navlink link="/gettingstarted" icon="getting_started">
+                Getting started guide
+            </li>
+            <li rsr-navlink link="/guides/rules" icon="rules">
+                Read our rules
+            </li>
+            <li rsr-navlink link="/howtoplay" icon="manual">
+                Read the manual
+            </li>
+            <li rsr-navlink link="/guides/securetips" icon="security">
+                Read our security tips
+            </li>
+            <li rsr-navlink link="/guides/guides" icon="safety">
+                Read our safety guidelines
+            </li>
+            <li rsr-navlink link="/faq/faqindex" icon="kbase_home">
+                Get the answer to a question
+            </li>
+            <li rsr-navlink href="https://rune-server.ee/runescape-development/rs2-server/projects/703533-rs-reborn.html" icon="comment">
+                Comment on our service
+            </li>
+            <li rsr-navlink href="https://github.com/rsreborn/server/issues" icon="report_bug">
+                Report a bug/fault
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="polls">
+            <legend>Latest Poll</legend>
+            <span>What makes you want to kill a Challenging/High Level Monster?</span>
+            <li rsr-navlink link="/poll/latestpoll" icon="latest_poll">
+                Vote in this poll (Members only)
+            </li>
+            <li rsr-navlink link="/poll/list" icon="poll_home">
+                View previous polls
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="website">
+            <legend>Website Features</legend>
+            <li rsr-navlink link="/worldmap/worldmap" icon="worldmap">
+                View the world map
+            </li>
+            <li rsr-navlink link="/hiscores" icon="hiscores">
+                View the hiscores
+            </li>
+            <li rsr-navlink link="/forum" icon="forums">
+                Discuss the game on the forums
+            </li>
+            <li rsr-navlink link="/varrock/varrockindex" icon="stories">
+                Read stories and letters
+            </li>
+            <li rsr-navlink link="/files/files" icon="downloads">
+                Download extra files
+            </li>
+            <li rsr-navlink link="/shop" icon="shop" *ngIf="!isLate05Theme">
+                Jagex Shop
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="membership">
+            <legend>Membership</legend>
+            <li rsr-navlink link="/members/members" icon="membership_benefits">
+                Benefits of membership
+            </li>
+            <li rsr-navlink link="/members/subscribe" icon="new_subscription">
+                Start a new subscription
+            </li>
+            <li rsr-navlink link="/members/subscribe" icon="extend_subscription">
+                Extend an existing subscription
+            </li>
+            <li rsr-navlink link="/unsubscribe" icon="cancel_subscription">
+                Cancel an existing subscription
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="account">
+            <legend>Account Management</legend>
+            <li rsr-navlink link="/message/inboxfromstaff" icon="messages">
+                Read your messages from Jagex
+            </li>
+            <li rsr-navlink link="/password/passchange" icon="password">
+                Change your password
+            </li>
+            <li rsr-navlink link="/password/recoveryset" icon="set_recovery">
+                Set new recovery questions
+            </li>
+            <li rsr-navlink link="/password/recoverycancel" icon="cancel_recovery">
+                Cancel recovery questions
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="recovery">
+            <legend>Account Recovery</legend>
+            <li rsr-navlink link="/passsupport" icon="recover_account">
+                Recover a lost password
+            </li>
+            <li rsr-navlink link="/passsupport" icon="recover_account">
+                Recover a locked account
+            </li>
+            <li rsr-navlink link="/tracker" icon="track_recovery">
+                Track a recovery request
+            </li>
+            <li rsr-navlink link="/" icon="appeal_offence">
+                Appeal a ban
+            </li>
+        </rsr-navset>
+
+        <rsr-navset icon="pmod">
+            <legend>Player moderators</legend>
+            <li rsr-navlink link="/pmod/index" icon="pmods">
+                Visit the player moderator centre
+            </li>
+            <li rsr-navlink link="/faq/pmodfaq" icon="pmods">
+                Find out about player mods
+            </li>
+        </rsr-navset>
+
+        <rsr-navset [minHeight]="false">
+            <legend>RuneScape Classic</legend>
+            <li rsr-navlink link="/playclassic">
+                RuneScape Classic
+            </li>
+        </rsr-navset>
+    </aside>
+
+    <aside class="rsr-title-content" [ngClass]="{ 'rsr-late05': isLate05Theme }">
+        <div class="rsr-buttons">
+            <a routerLink="/create" class="rsr-left"></a>
+            <a routerLink="/detail" class="rsr-right"></a>
+        </div>
+
+        <div class="rsr-scroll rsr-news-scroll">
+            <div class="rsr-news-list">
+                <div class="rsr-recent-news">
+                    <img src="/assets/title/recent_news.gif" alt="Recent News" />
+                </div>
+
+                <div class="rsr-news-post">
+                    <header>
+                        <div class="rsr-news-title">Updates, updates, and more updates...</div>
+                        <div class="rsr-news-date">20-Feb-2006</div>
+                    </header>
+
+                    <main>
+                        <article>
+                            Prepare yourself for an update the like of which has never been seen before! This week sees a massive amount of new content (including the new Wilderness Beast) and improvements to one of the best known areas of RuneScape! The shining white towers of Falador Castle will never be looked at in the same way again...
+                        </article>
+
+                        <img src="/assets/news/icons/earth_game_updates.gif" alt="Game Updates" />
+                    </main>
+
+                    <a routerLink="/news/article">Read more...</a>
+                </div>
+
+                <div class="rsr-news-post">
+                    <header>
+                        <div class="rsr-news-title">Friend system upgrades</div>
+                        <div class="rsr-news-date">15-Feb-2006</div>
+                    </header>
+
+                    <main>
+                        <article>
+                            Today we have upgraded the friendlist system to be 50% faster. This should hopefully mean it runs more reliably.
+                        </article>
+
+                        <img src="/assets/news/icons/technical_3.gif" alt="Technical" />
+                    </main>
+
+                    <a routerLink="/news/article">Read more...</a>
+                </div>
+
+                <div class="rsr-news-post">
+                    <header>
+                        <div class="rsr-news-title">Cabin Fever</div>
+                        <div class="rsr-news-date">07-Feb-2006</div>
+                    </header>
+
+                    <main>
+                        <article>
+                            Avast! Piracy and plunder await! For all of you who dream of a life on the ocean wave there is now a pirate captain recruiting for a dangerous voyage to a hive of scum and villainy south of Morytania.
+                        </article>
+
+                        <img src="/assets/news/icons/earth_game_updates.gif" alt="Game Updates" />
+                    </main>
+
+                    <a routerLink="/news/article">Read more...</a>
+                </div>
+            </div>
+
+            <div class="rsr-news-archive">
+                <a routerLink="/news/list">Browse the news archives</a>
+            </div>
+        </div>
+    </aside>
+</main>

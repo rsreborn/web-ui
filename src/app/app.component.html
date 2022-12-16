@@ -3,6 +3,10 @@
 
     <footer class="rsr-site-footer">
         Original RuneScape images are copyright &copy; 1999 - 2022 Jagex Ltd.<br />
+        <select [ngModel]="theme" (change)="themeSelected($event)">
+            <option *ngFor="let theme of themeList"
+                    [value]="theme">{{ theme }}</option>
+        </select>&nbsp;
         RS-Reborn - <a href="https://github.com/rsreborn" target="_blank">Github</a>
     </footer>
 </div>

@@ -6,10 +6,20 @@ html, body {
 }
 
 body {
-    background: rs.$background;
     font-size: rs.$font-size;
     font-family: rs.$font-family;
     color: rs.$white;
+    background-color: rs.$black;
+
+    &.rs-late-04 {
+        background: rs.$late04-bg;
+    }
+    &.rs-late-05 {
+        background: rs.$late05-bg;
+    }
+    &.rs-06, &.rs-07, &.rs-08 {
+        background: rs.$rs06-bg;
+    }
 }
 
 a {
@@ -34,4 +44,11 @@ footer.rsr-site-footer {
     clear: both;
     font-size: 11px;
     text-align: center;
+
+    select {
+        background-color: rs.$black;
+        color: rs.$white;
+        border-color: rs.$input-brown;
+        font-size: x-small;
+    }
 }
